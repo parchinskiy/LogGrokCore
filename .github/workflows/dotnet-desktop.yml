@@ -32,7 +32,7 @@ jobs:
         Configuration: Release
         
     - name: Build
-      run: dotnet publish LogGrokCore\LogGrokCore.csproj --configuration Release --no-restore --self-contained true
+      run: dotnet publish LogGrokCore\LogGrokCore.csproj --runtime win10-x64 --configuration Release --no-restore --self-contained true
 
     - name: Execute unit tests
       run: dotnet test --configuration Release --no-restore --verbosity normal
